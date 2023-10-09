@@ -31,8 +31,10 @@ void choice(std::unordered_map<std::string, User>& users)
 void actions(User& ur)
 {
     char choice;
-    while (std::cout << "Выберите действие:\n 1 - отобразить текущую почту и имя пользователя.\t2 - сменить имя пользователя.\t"
-           "3 - сменить пароль.\t0 - выйти из пользователя.\n" && std::cin >> choice) {
+    while (true) {
+        std::cout << "Выберите действие:\n 1 - отобразить текущую почту и имя пользователя.\t2 - сменить имя пользователя.\t"
+           "3 - сменить пароль.\t0 - выйти из пользователя.\n";
+        std::cin >> choice;
         switch (choice)
         {
             case '1': {
